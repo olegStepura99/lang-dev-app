@@ -1,0 +1,19 @@
+.dashboardContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    color: #0A2E52;
+    margin: 0 auto;
+    column-gap: 60px;
+    row-gap: 60px;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .dashboardContainer {
+        column-gap: 12px;
+        row-gap: 12px;
+        padding: 18px;
+    }
+
+}

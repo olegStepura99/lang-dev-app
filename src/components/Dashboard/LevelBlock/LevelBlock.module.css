@@ -1,0 +1,67 @@
+.levelBlock {
+    background: #ECEDF2;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(10, 46, 82, 0.12), -6px -6px 40px rgba(255, 255, 255, 0.63), 4px 4px 15px rgba(10, 46, 82, 0.11), inset 4px 4px 30px rgba(10, 46, 82, 0.11), inset -4px -4px 40px #FFFFFF;
+}
+
+.levelBlock h3 {
+    text-align: right;
+    margin: 0;
+    padding-top: 12px;
+}
+
+.levelBlock span {
+    text-align: right;
+}
+
+.levelBlock p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: calc(12px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    text-align: left;
+}
+
+.levelBlock {
+    position: relative;
+    padding: 30px 30px 90px 30px;
+    display: grid;
+    align-content: start;
+}
+
+.levelBackground::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 24px;
+    bottom: -22px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-image: url("./../../../assets/img/level-background.svg");
+}
+
+.levelBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: 1120px) {
+    .levelBackground::after {
+        left: 5.6%;
+        bottom: -4.6%;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 992px) {
+    .levelBlock {
+        min-height: unset;
+    }
+
+    .levelBlock {
+        padding: 24px;
+    }
+}

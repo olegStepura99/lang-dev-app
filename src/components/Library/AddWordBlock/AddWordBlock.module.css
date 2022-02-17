@@ -1,0 +1,42 @@
+.addWordBlock {
+    display: grid;
+    grid-template-columns: 3fr auto;
+    column-gap: 30px;
+    justify-items: center;
+    margin: 60px;
+}
+
+.addWordBlock button {
+    padding: 0;
+    border: none;
+    background: none;
+    transition: .6s;
+}
+
+.addWordBlock button:focus {
+    outline: none;
+}
+.addWordBlock button:hover {
+    opacity: .6;
+}
+.addWordBlock input {
+    box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.18), inset 2px 2px 4px rgba(0, 0, 0, 0.24), inset -8px -8px 15px rgba(255, 255, 255, 0.02), inset 8px 8px 15px rgba(10, 46, 82, 0.21);
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    padding: 6px 12px;
+}
+
+.addWordBlock input:focus {
+    outline: none;
+}
+
+.addWordBlock img {
+    max-width: 42px;
+    box-shadow: 2px 2px 5px rgba(10, 46, 82, 0.16), -8px -8px 40px rgba(255, 255, 255, 0.56), 8px 8px 15px rgba(0, 0, 0, 0.17);
+    border-radius: 50%;
+}
+.addWordBlock img:hover {
+    opacity: .6;
+    cursor: pointer;
+}

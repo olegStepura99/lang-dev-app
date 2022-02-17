@@ -1,0 +1,14 @@
+.progressBar {
+    position: absolute;
+    height: 12px;
+    background-image: url("./../../assets/img/progress-bar.svg");
+    border-radius: 0 20px 20px 0 ;
+    width: 0;
+    transition: .6s;
+}
+.progressBarContainer {
+    position: relative;
+    height: 12px;
+    background: #E9EBF1;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.69), inset -2px -2px 15px rgba(255, 255, 255, 0.79), inset 2px 2px 15px rgba(10, 46, 82, 0.44);
+}

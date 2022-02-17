@@ -1,0 +1,14 @@
+.btnNext {
+    box-shadow: 2px 2px 5px rgba(10, 46, 82, 0.16), -8px -8px 40px rgba(255, 255, 255, 0.56), 8px 8px 15px rgba(0, 0, 0, 0.17);
+    border-radius: 50px;
+    background-image: url("./../../../assets/img/arrow.svg");
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 45px;
+    border: none;
+    background-position: center;
+    transform: scale(-1, 1);
+    width: 190px;
+    margin: 100px auto;
+    cursor: pointer;
+}
