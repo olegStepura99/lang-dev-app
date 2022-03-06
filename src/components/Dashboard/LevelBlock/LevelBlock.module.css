@@ -7,23 +7,19 @@
 .levelBlock h3 {
     text-align: right;
     margin: 0;
-    padding-top: 12px;
-}
-
-.levelBlock span {
-    text-align: right;
+    padding-top: 5px;
 }
 
 .levelBlock p {
     font-style: normal;
     font-weight: 300;
     font-size: calc(12px + (24 - 16) * (100vw - 400px) / (800 - 400));
-    text-align: left;
+    text-align: right;
 }
 
 .levelBlock {
     position: relative;
-    padding: 30px 30px 90px 30px;
+    padding: 20px 30px 30px 30px;
     display: grid;
     align-content: start;
 }

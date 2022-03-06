@@ -1,9 +1,9 @@
 import React from "react";
 import classes from './ProgressBar.module.css'
 
-const ProgressBar = ({library, wordIndex}) => {
+const ProgressBar = ({library, correctWords}) => {
     const progressBarWidth = {
-        width:`${(100 / library.slice(-10).length) * (wordIndex +1)}vw`,
+        width:`${(100 / library.length) * correctWords}vw`,
       }
 
     return(

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ProgressBar from "../ProgressBar/ProgressBar";
+import ProgressBar from "../UI/ProgressBar/ProgressBar";
 import BtnNext from "./BtnNext/BtnNext";
 
 

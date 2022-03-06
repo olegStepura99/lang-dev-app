@@ -31,7 +31,7 @@
     background-image: url("./../../assets/img/bg-game.svg");
     background-position: 30px 30px;
     background-repeat: no-repeat;
-    max-width: 460px;
+    max-width: 500px;
     background-size: 86%;
     background-color: #e9eef2;
     padding: 12px;
@@ -55,7 +55,7 @@
 
 .gameContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 30px;
     column-gap: 30px;
     justify-items: center;

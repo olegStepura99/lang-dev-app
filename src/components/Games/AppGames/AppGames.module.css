@@ -1,3 +1,7 @@
+.gameContaiter{
+    text-align: center;
+}
+
 .btnCheck:active {
     box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.18), inset 2px 2px 4px rgba(0, 0, 0, 0.24), inset -8px -8px 15px rgba(255, 255, 255, 0.02), inset 8px 8px 15px rgba(10, 46, 82, 0.21);
 }
@@ -12,6 +16,31 @@
     text-transform: uppercase;
     font-size: 18px;
     color: #0A2E52;
+}
+
+.btnListen {
+    box-shadow: 2px 2px 5px rgba(10, 46, 82, 0.16), -8px -8px 40px rgba(255, 255, 255, 0.56), 8px 8px 15px rgba(0, 0, 0, 0.17);
+    border-radius: 50px;
+    background-image: url("./../../../assets/img/listenBtn.png");
+    height: 60px;
+    width: 90px;
+    background-repeat: no-repeat;
+    background-size: 45px;
+    border: none;
+    background-position: center;
+    margin-top: 50px;
+}
+.btnRepeat {
+    box-shadow: 2px 2px 5px rgba(10, 46, 82, 0.16), -8px -8px 40px rgba(255, 255, 255, 0.56), 8px 8px 15px rgba(0, 0, 0, 0.17);
+    border-radius: 50px;
+    background-image: url("./../../../assets/img/microphoneBtn.png");
+    height: 60px;
+    width: 90px;
+    background-repeat: no-repeat;
+    background-size: 45px;
+    border: none;
+    background-position: center;
+    margin-top: 0px;
 }
 
 .writeWordBlock {
@@ -60,6 +89,21 @@
     column-gap: 30px;
 }
 
+.letterContainer{
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+.letter{
+    margin: 10px 10px;
+    text-transform: uppercase;
+    padding: 15px;
+    border: 2px solid rgba(10, 46, 82, 0.16);
+    border-radius: 10px;
+}
 span {
     font-size: 18px;
     width: 100%;

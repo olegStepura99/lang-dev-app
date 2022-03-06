@@ -1,14 +1,16 @@
-import React, {useRef} from 'react';
+import React, {useRef, useContext} from 'react';
 import classes from './Library.module.css';
-import deleteBtn from './../../assets/img/delete.svg'
 import AddWordBlock from './AddWordBlock/AddWordBlock';
+import WordsTable from './WordsTable/WordsTable';
+import Store from '../../context';
 
-const Library = ({library, setLibrary}) => {
+const Library = () => {
     const inputValue = useRef();
-
+    const data = useContext(Store);
+    
     const deleteWord = (id) => {
-        const updateLibrary = library.filter((word, index) => index !== id);
-        setLibrary(updateLibrary);
+        const updateLibrary = data.library.filter((word, index) => index !== id);
+        data.setLibrary(updateLibrary);
         localStorage.setItem('library', JSON.stringify(updateLibrary))
     }
 
@@ -16,8 +18,8 @@ const Library = ({library, setLibrary}) => {
         event.preventDefault();
         const response = await fetch(`https://tmp.myitschool.org/API/translate/?source=ru&target=en&word=${inputValue.current.value}`);
         const translation = await response.json();
-        const updateLibrary = [...library,{word: translation.word, translate: translation.translate, learn:0}];
-        setLibrary(updateLibrary)
+        const updateLibrary = [...data.library,{word: translation.word, translate: translation.translate, learn:0}];
+        data.setLibrary(updateLibrary)
         localStorage.setItem('library', JSON.stringify(updateLibrary))
         inputValue.current.value = '';
     }
@@ -26,27 +28,7 @@ const Library = ({library, setLibrary}) => {
         <section onSubmit = {addNewWord} className={classes.libraryBlock}>
            <span>Add new <b>Word</b></span>
             <AddWordBlock inputValue={inputValue}/>
-           <div className={classes.wordsTable}>
-               <ul>
-                   <li><h3>Word</h3></li>
-                   <li><h3>Translation</h3></li>
-                   <li><h3>Learn</h3></li>
-               </ul>
-
-               {library.map((word, index) => (
-                       <ul key={index}>
-                           <li>{word.word}</li>
-                           <li>{word.translate}</li>
-                           <li>{word.learn}</li>
-
-                           <div className={classes.settings}>
-                                <button onClick={() => deleteWord(index)}>
-                                    <img src={deleteBtn} alt="delete word button" />
-                                </button>
-                           </div>
-                       </ul>
-                   ))}
-           </div>
+            <WordsTable deleteWord={deleteWord}/>
         </section>
     )
 }

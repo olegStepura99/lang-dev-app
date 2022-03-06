@@ -6,7 +6,6 @@ const PointsBlock = () => {
     const contextObj = useContext(Store);
     return (
     <div className={classes.pointsBlock}>
-        <span>Common exprience</span>
         <h3> {contextObj.points} points</h3>
     </div>
     )
